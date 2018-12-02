@@ -20,7 +20,7 @@ namespace myovh_zone
             switch (args.Length)
             {
                 case (0):
-                    Console.WriteLine("Usage : dotnet " +
+                    Console.WriteLine("Usage? : dotnet " +
                                       Environment.CommandLine
                                       + " [init|validate|getip|zoneupload|showconfig]");
 
