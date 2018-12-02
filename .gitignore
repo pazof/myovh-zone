@@ -1,6 +1,8 @@
 
 ovh.json
 .vs/
-bin/
-obj/
+/myovh-zone/bin/
+/myovh-zone/obj/
+/myovh-zone/latest-ip
+/ifaddr/build/
 
