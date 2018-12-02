@@ -7,7 +7,7 @@ int main(int argc, char ** argv)
 {
 
   if (argc<2) {
-    fprintf(stderr, "usage: %s <ifname>\nOù `ifname` est le nom de l'interface, par exemple, `eth0`.", argv[0]);
+    fprintf(stderr, "usage: %s <ifname>\nOù `ifname` est le nom de l'interface, par exemple, `eth0`.\n", argv[0]);
     
     return 2;
   }
