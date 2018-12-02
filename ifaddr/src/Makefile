@@ -1,8 +1,13 @@
+DESTDIR=../build
+BINDIR=bin
+BINARY=$(DESTDIR)/$(BINDIR)/ifaddr
 
-all: ifaddr
-
-ifaddr: main.c getifaddr.c
-	gcc  $^ -o ifaddr
+all: $(BINARY)
+	
+$(BINARY): main.c getifaddr.c
+	mkdir -p $(DESTDIR)/$(BINDIR)
+	gcc  $^ -o $@
 
 dist-clean:
-	rm -f ifaddr
+	rm -f $(BINARY)
+
