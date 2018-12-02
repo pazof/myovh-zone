@@ -14,5 +14,5 @@ $(IFADDRBIN):
 
 dist-clean:
 	make -C ifaddr/src dist-clean
-	make -C myovh-zone/src dist-clean
+	make -C myovh-zone dist-clean
 
