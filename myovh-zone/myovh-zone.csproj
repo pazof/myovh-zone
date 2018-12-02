@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>myovh_zone</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="csharp-ovh" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".ovh.conf" />
+    <None Remove="a.ovh.conf" />
+  </ItemGroup>
+</Project>

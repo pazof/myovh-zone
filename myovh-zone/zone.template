@@ -1,0 +1,20 @@
+$TTL 3600
+@	IN SOA dns200.anycast.me. tech.ovh.net. (2018120100 86400 3600 3600000 300)
+            3600 IN NS     dns200.anycast.me.
+            3600 IN NS     ns200.anycast.me.
+            3600 IN MX 1   mx1.ovh.net.
+            3600 IN MX 100 mxb.ovh.net.
+            3600 IN MX 5   mx2.ovh.net.
+            3600 IN A      {ip}
+            3600 IN TXT    "1|www.pschneider.fr"
+dev         3600 IN A      {ip}
+freefield   3600 IN A      {ip}
+lua         3600 IN A      {ip}
+www         3600 IN MX 1   mx1.ovh.net.
+www         3600 IN MX 100 mxb.ovh.net.
+www         3600 IN MX 5   mx2.ovh.net.
+www         3600 IN A      {ip}
+www         3600 IN TXT    "l|fr"
+www         3600 IN TXT    "3|welcome"
+yavsc       3600 IN A      {ip}
+yavscpre    3600 IN A      {ip}
