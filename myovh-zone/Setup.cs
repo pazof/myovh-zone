@@ -50,6 +50,8 @@ namespace myovh_zone
 
         public string IpKeyWord { get; set; } = "{ip}";
 
+        public string ZoneNameKeyWord { get; set; } = "{zn}";
+
         public string IpCacheFileName { get; set; } = "latest-ip";
 
         public string ZoneName { get; set; }

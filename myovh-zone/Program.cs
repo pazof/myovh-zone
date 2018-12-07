@@ -127,8 +127,12 @@ namespace myovh_zone
             }
             var zone = File.ReadAllLines(config.ZoneTemplateFileName);
             StringBuilder sb = new StringBuilder();
-            foreach (string line in zone) {
-                sb.AppendLine(line.Replace(config.IpKeyWord, saddr));
+            foreach (string line in zone)
+            {
+                var localzed = line.Replace(config.ZoneNameKeyWord, config.ZoneName);
+                var finalline = localzed.Replace(config.IpKeyWord, saddr);
+                sb.AppendLine(finalline);
+                Console.WriteLine(finalline);
             }
 
             var cli = GetClient(config);
