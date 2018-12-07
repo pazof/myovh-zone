@@ -1,12 +1,12 @@
-# My OVH zone import
+# My OVH zone
 
 ## Summary
 
-This project provides a command to update your DNS zone, by OVH.
+This project provides a command to update your DNS zone, host by OVH.
 
 Using a command, written in C (ifaddr), that assuming a GNU/Linux operating system,
 this app will update you DNS zone from OVH services, using 
-their Web API, a some configuration.
+their Web API, a some configuration (a template, as a text file where all '{ip}' text is replaced with the value found by ifaddr).
 
 ## Configuration
 
