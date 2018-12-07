@@ -2,7 +2,7 @@
 
 ## Summary
 
-This project provides a command to update your DNS zone, host by OVH.
+This project provides a command to update your DNS zone, hosted by OVH.
 
 Using a command, written in C (ifaddr), that assuming a GNU/Linux operating system,
 this app will update you DNS zone from OVH services, using 
