@@ -48,6 +48,9 @@ namespace myovh_zone
         /// <value>The name of the zone template file.</value>
         public string ZoneTemplateFileName { get; set; }
 
+        /// <summary>
+        /// Get or set the keywork used to be replaced with interface ip
+        /// </summary>
         public string IpKeyWord { get; set; } = "{ip}";
 
         public string ZoneNameKeyWord { get; set; } = "{zn}";
