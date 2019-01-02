@@ -9,8 +9,4 @@
   <ItemGroup>
     <PackageReference Include="csharp-ovh" Version="2.0.0" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove=".ovh.conf" />
-    <None Remove="a.ovh.conf" />
-  </ItemGroup>
 </Project>
