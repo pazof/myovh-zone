@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Ovh.Api;
 using System.IO;
 using Newtonsoft.Json;
@@ -120,7 +120,8 @@ namespace myovh_zone
             if (ipci.Exists)
             {
                 var cachedinfo = File.ReadAllText(config.IpCacheFileName);
-                if (cachedinfo == saddr) {
+                if (cachedinfo == saddr)
+                {
                     Console.WriteLine($"Cached info is correct (read from {config.IpCacheFileName}). aborting.");
                     return;
                 }
@@ -137,9 +138,10 @@ namespace myovh_zone
 
             var cli = GetClient(config);
             var result = cli.Post($"/domain/zone/{config.ZoneName}/import",
-                     new { 
-                zoneFile = sb.ToString()
-            });
+                     new
+                     {
+                         zoneFile = sb.ToString()
+                     });
             Console.WriteLine(result);
             File.WriteAllText(config.IpCacheFileName, saddr);
         }
@@ -161,7 +163,7 @@ namespace myovh_zone
             File.WriteAllText(OvhConfigFile,
                               JsonConvert.SerializeObject(setup, Formatting.Indented));
             Console.WriteLine("Setup was updated, for you consumer key.");
-            Console.Write( 
+            Console.Write(
                 String.Format("Please visit {0} to authenticate ",
                     credentialRequestResult.ValidationUrl));
 
