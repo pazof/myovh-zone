@@ -1,0 +1,86 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/paul/workspace/myovh-zone/src/ovh/ovh.csproj": {}
+  },
+  "projects": {
+    "/home/paul/workspace/myovh-zone/src/ovh/ovh.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/paul/workspace/myovh-zone/src/ovh/ovh.csproj",
+        "projectName": "ovh",
+        "projectPath": "/home/paul/workspace/myovh-zone/src/ovh/ovh.csproj",
+        "packagesPath": "/home/paul/.nuget/packages",
+        "outputPath": "/home/paul/workspace/myovh-zone/src/ovh/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/paul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "/usr/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://isn.pschneider.fr/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Mono.Options": {
+              "target": "Package",
+              "version": "[6.12.0.148, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "csharp-ovh": {
+              "target": "Package",
+              "version": "[4.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.102/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

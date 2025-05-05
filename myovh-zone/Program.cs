@@ -1,10 +1,11 @@
 using System;
-using Ovh.Api;
 using System.IO;
-using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Text;
 using System.Collections.Generic;
+using Ovh.Api;
+using Newtonsoft.Json;
+using Ovh.Api.Models;
 
 namespace myovh_zone
 {
@@ -16,7 +17,7 @@ namespace myovh_zone
         static void Main(string[] args)
         {
             Console.WriteLine("Hello OVH World!");
-
+            
             switch (args.Length)
             {
                 case (0):
@@ -88,8 +89,17 @@ namespace myovh_zone
 
         }
 
-        static Setup GetSetup() => JsonConvert.DeserializeObject<Setup>(
-                                File.ReadAllText(OvhConfigFile));
+        static Setup GetSetup()
+        {
+            var fileSetupInfo = new FileInfo(OvhConfigFile);
+            if (!fileSetupInfo.Exists) 
+            {
+                Console.Error.WriteLine($"Setup was not found in {fileSetupInfo.FullName} Please, create a new one by using the 'init' command.");
+                return null;
+            }
+            var fileSetup = File.ReadAllText(OvhConfigFile);
+            return JsonConvert.DeserializeObject<Setup>(fileSetup);
+        }
 
         static Client GetClient(Setup setup)
         {
@@ -104,6 +114,7 @@ namespace myovh_zone
         {
             var startInfo = new ProcessStartInfo
             {
+                UseShellExecute = false,
                 RedirectStandardOutput = true,
                 FileName = "ifaddr",
                 Arguments = ifname
@@ -137,11 +148,13 @@ namespace myovh_zone
             }
 
             var cli = GetClient(config);
-            var result = cli.Post($"/domain/zone/{config.ZoneName}/import",
-                     new
+            var data = new
                      {
                          zoneFile = sb.ToString()
-                     });
+                     };
+            var result = cli.Post($"/domain/zone/{config.ZoneName}/import",
+            JsonConvert.SerializeObject(data)
+                     );
             Console.WriteLine(result);
             File.WriteAllText(config.IpCacheFileName, saddr);
         }

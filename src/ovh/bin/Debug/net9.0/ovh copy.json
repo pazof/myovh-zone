@@ -1,0 +1,12 @@
+{
+  "OvhInterface": "eth0",
+  "EndPoint": "ovh-eu",
+  "ApplicationKey": "yrIEIMtdL3vd6Yg2",
+  "ApplicationSecret": "1PjCKHImLoyRrrtvSMeCTmyW794ZMhdQ",
+  "ConsumerKey": "TuxfgrnnbwfKehSX7GsDNh5QFxqImZci",
+  "ZoneTemplateFileName": "zone.template",
+  "IpKeyWord": "{ip}",
+  "ZoneNameKeyWord": "{zn}",
+  "IpCacheFileName": "latest-ip",
+  "ZoneName": "pschneider.fr"
+}
